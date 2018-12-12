@@ -3,7 +3,7 @@ from collections import Counter
 with open('input', 'r') as input: 
     boxes = input.read().splitlines()
     
-    def calculate_difference_of_occurrences(boxes): 
+    def find_multiple_occurrences_of_letters_in_id(boxes): 
         ufta = '' 
         for box in boxes:
             letter_counter = Counter(box)
@@ -14,9 +14,9 @@ with open('input', 'r') as input:
         occurrences = Counter(ufta)
         print('Part 1: ', occurrences['2'] * occurrences['3'])
         
-    calculate_difference_of_occurrences(boxes)
+    find_multiple_occurrences_of_letters_in_id(boxes)
 
-    def found_equality_by_one_letter(boxes): 
+    def found_equality_by_difference_of_one_letter(boxes): 
         for box_a in boxes: 
             boxes_b = list(boxes)
             boxes_b.remove(box_a)
@@ -38,5 +38,4 @@ with open('input', 'r') as input:
                     print('Part 2:', diff)
                     return 
     
-    found_equality_by_one_letter(boxes)
-                
+    found_equality_by_difference_of_one_letter(boxes)
