@@ -63,4 +63,4 @@ with open('input', 'r') as input:
 
     minute, times = Counter(highest['minutes']).most_common(1)[0]
     print('Part 1:', int(highest['id'][1:]) * minute)
-    print('Part 2:', int(max_minutes_asleep['id'][1:]) * minute)
+    print('Part 2:', int(max_minutes_asleep['id'][1:]) * max_minutes_asleep['minute'])
