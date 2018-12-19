@@ -18,6 +18,6 @@ with open('input', 'r') as input:
     print("Part 1: ", len(react(polymer)))  # 0:00:00.115975
 
     most_short = min([react(polymer.replace(chr(c), '').replace(chr(c).upper(), ''))
-              for c in range(97, 123)], key=len)
+                      for c in range(97, 123)], key=len)
 
     print("Part 2: ", len(react(most_short)))
